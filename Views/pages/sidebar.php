@@ -17,15 +17,15 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="./template_email_activation.html">
               <i class="material-icons">person</i>
               <p>PLANTILLAS</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
+            <a class="nav-link" href="./send_email_html.php">
               <i class="material-icons">language</i>
-              <p>SOPORTE</p>
+              <p>ENVIAR CORREO</p>
             </a>
           </li>
           <!-- <li class="nav-item active-pro ">
