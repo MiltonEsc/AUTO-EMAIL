@@ -21,22 +21,22 @@
         <li class="header-title">Images</li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="Views/assets/img/sidebar-1.jpg" alt="">
+            <img src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/img/sidebar-1.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="Views/assets/img/sidebar-2.jpg" alt="">
+            <img src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/img/sidebar-2.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="Views/assets/img/sidebar-3.jpg" alt="">
+            <img src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/img/sidebar-3.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="Views/assets/img/sidebar-4.jpg" alt="">
+            <img src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/img/sidebar-4.jpg" alt="">
           </a>
         </li>
       </ul>
@@ -45,46 +45,46 @@
   <!--   Core JS Files   -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-  <script src="Views/assets/js/core/jquery.min.js"></script>
-  <script src="Views/assets/js/core/popper.min.js"></script>
-  <script src="Views/assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="Views/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/core/jquery.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/core/popper.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!-- Plugin for the momentJs  -->
-  <script src="Views/assets/js/plugins/moment.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/moment.min.js"></script>
   <!--  Plugin for Sweet Alert -->
-  <script src="Views/assets/js/plugins/sweetalert2.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/sweetalert2.js"></script>
   <!-- Forms Validations Plugin -->
-  <script src="Views/assets/js/plugins/jquery.validate.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
-  <script src="Views/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
   <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-  <script src="Views/assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/bootstrap-selectpicker.js"></script>
   <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
-  <script src="Views/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-  <script src="Views/assets/js/plugins/jquery.dataTables.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/jquery.dataTables.min.js"></script>
   <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-  <script src="Views/assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/bootstrap-tagsinput.js"></script>
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-  <script src="Views/assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/jasny-bootstrap.min.js"></script>
   <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
-  <script src="Views/assets/js/plugins/fullcalendar.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/fullcalendar.min.js"></script>
   <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
-  <script src="Views/assets/js/plugins/jquery-jvectormap.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/jquery-jvectormap.js"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="Views/assets/js/plugins/nouislider.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/nouislider.min.js"></script>
   <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
   <!-- Library for adding dinamically elements -->
-  <script src="Views/assets/js/plugins/arrive.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/arrive.min.js"></script>
   <!-- Chartist JS -->
-  <script src="Views/assets/js/plugins/chartist.min.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="Views/assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="Views/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-  <script src="Views/assets/demo/demo.js"></script>
+  <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {

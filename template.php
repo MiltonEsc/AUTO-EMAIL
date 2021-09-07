@@ -15,7 +15,7 @@
 
 </head>
 <body style="margin: 0px; padding: 0px;">
-    <h1>Enlace</h1>
+    <h1>Enlace[TEMPLATE]</h1>
     <img src="[TEMPLATE]" alt="plantilla" srcset="">
 </body>
 

@@ -1,5 +1,5 @@
 <div class="wrapper ">
-    <div class="sidebar" data-color="orange" data-background-color="black" data-image="Views/assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="orange" data-background-color="black" data-image="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/img/sidebar-1.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -11,19 +11,19 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/index.php">
               <i class="material-icons">dashboard</i>
               <p>INICIO</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./template_email_activation.html">
+            <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Controllers/template_model.php">
               <i class="material-icons">person</i>
               <p>PLANTILLAS</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./send_email_html.php">
+            <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/send_email_html.php">
               <i class="material-icons">language</i>
               <p>ENVIAR CORREO</p>
             </a>

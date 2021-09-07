@@ -10,14 +10,14 @@ Coded by Creative Tim
 =========================================================
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 
-<?php require("conexion/db.php"); ?>
-<?php include("pages/head.php");?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/AUTO-EMAIL/conexion/db.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/AUTO-EMAIL/Views/pages/head.php";?>
 <!--<head>-->
 
-<?php include("pages/sidebar.php")?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/AUTO-EMAIL/Views/pages/sidebar.php";?>
     <div class="main-panel ">
       <!-- Navbar -->
-      <?php include("pages/navbar.php")?>
+      <?php include $_SERVER['DOCUMENT_ROOT']."/AUTO-EMAIL/Views/pages/navbar.php"?>
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
@@ -149,7 +149,7 @@ The above copyright notice and this permission notice shall be included in all c
                               <td class="text-center"><?php echo $row['exten']?></td>
                               <td class="text-center"><?php echo $row['correo']?></td>
                               <td class="text-center">
-                                <a data-toggle="modal" data-target="#exampleModal" class="btn btn-info  btn-fab btn-fab-mini btn-round"href="Controllers/edit-empleado.php?id=<?php echo $row['id'] ?>">
+                                <a class="btn btn-info  btn-fab btn-fab-mini btn-round" href="./Controllers/edit-empleado.php?id=<?php echo $row['id'] ?>">
                                 <i class="material-icons">edit</i>
                                 </a>
                                 <a class="btn btn-danger  btn-fab btn-fab-mini btn-round"href="Controllers/delete-empleado.php?id=<?php echo $row['id'] ?>">
@@ -164,63 +164,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div>
             </div><!--fin de la tabla-->
-            <div class="container-fluid">
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Actualizar Información</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <?php include("./Controllers/edit-empleado.php") ?>
-      <div class="modal-body">
-      <form action="Controllers/edit-empleado.php" method="post">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label class="bmd-label-floating">Nombres</label>
-              <input type="text" name="nombres" value="<?php echo $nombres; ?>" class="form-control">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="bmd-label-floating">Correo</label>
-              <input type="email" name="correo" value="<?php echo $nombres; ?>" class="form-control">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="">Fecha de Nacimiento</label>
-              <input type="date" name="nac" class="form-control" placeholder="">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="bmd-label-floating">Cargo en la Empresa</label>
-              <input type="text" name="cargo" class="form-control">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label class="bmd-label-floating">Extencion</label>
-              <input type="number" name="exten" class="form-control">
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
-      </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-        </div>
+            
       </div>
     </div>
       </div>
