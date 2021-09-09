@@ -12,6 +12,7 @@
         $update_persona = $mysqli->query($query);
         if (mysqli_num_rows($update_persona) == 1) {
             $row_update = mysqli_fetch_array($update_persona);
+            $id = $row_update['id']; 
             $nombres = $row_update['nombres'];
             $correo = $row_update['correo'];
             $nac = $row_update['fecha_nacimiento'];
@@ -73,7 +74,7 @@
                     <div class="col-md-6">
                     <div class="form-group">
                         <label class="bmd-label-floating">Extencion</label>
-                        <input type="number" name="exten" value="<?php echo $exten;?> "class="form-control">
+                        <input type="text" name="exten" value="<?php echo $exten;?> "class="form-control">
                     </div>
                     </div>
                 </div>
