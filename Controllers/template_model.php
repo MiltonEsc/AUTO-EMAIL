@@ -26,13 +26,13 @@ $cont = 1;
             <div style="padding-top: 60px; padding-left: 55px; width: 340px; height: 474px;">
                     <h4 style="text-align: center; margin-bottom: 2px; font-family: 'Courgette', cursive; font-size: 20px; color: #b45f06"></h4>
                     
-                    <p style="text-align: center; margin-top: 0; font-family: 'Exo', sans-serif; padding-top: 28px;"><strong>Hoy <?php echo $fechaActual; ?></strong></p>
+                    <p style="text-align: center;margin-left: 3px; margin-top: 0; font-family: 'Exo', sans-serif; padding-top: 28px;"><strong>Hoy <?php echo $fechaActual; ?></strong></p>
                 <div class="foto">
                     <center><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/AUTO-EMAIL/Views/assets/img/faces/perfil1.jpg" width="140" height="140"style="text-align: center; margin:0 auto;" alt="" srcset=""></center>
                 </div>
-                <center><h4 style="text-align: center; margin-top: 5px; margin-bottom: 2px; padding-top: 2px; font-family: 'Courgette', cursive; font-size: 25px; color: #b45f06"><?php echo $ListarDatos['nombres']; ?></h4></center>
+                <center><h4 style="text-align: center; margin: 0; font-family: 'Courgette', cursive; font-size: 22px; color: #b45f06"><?php echo $ListarDatos['nombres']; ?></h4></center>
                     
-                <center><p style="text-align: center; margin-bottom: 2px; font-family: 'Exo', sans-serif; margin-top: 5px;"><strong><?php echo $ListarDatos['cargo']; ?></strong></p></center>
+                <center><p style="text-align: center; font-family: 'Exo', sans-serif; margin: 0;"><strong><?php echo $ListarDatos['cargo']; ?></strong></p></center>
                 <center><p style="text-align: center; margin-top: 2px; font-family: 'Exo', sans-serif;"><strong>Exten. <?php echo $ListarDatos['exten']; ?></strong></p></center>
             </div>          
       </div>

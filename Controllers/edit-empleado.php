@@ -28,7 +28,7 @@
             $cargo = $_POST['cargo'];
             $exten = $_POST['exten'];
 
-            $query = "UPDATE personas set nombres = '$nombres', cargo = '$cargo', exten = '$exten', correo = '$correo' WHERE id = $id";
+            $query = "UPDATE personas set nombres = '$nombres', cargo = '$cargo', exten = '$exten', fecha_nacimiento = '$nac', correo = '$correo' WHERE id = $id";
             mysqli_query($mysqli, $query);
             $_SESSION['message'] = 'Person@ Actualizada Sastifactoriamente';
             $_SESSION['message_type'] = 'success';

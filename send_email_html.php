@@ -20,23 +20,28 @@
 		$nombres[] = $datos['nombres'];
 		$ruta = "Archivos/";
 		$ruta_completa = $ruta . $id;
-		$etiqueta = '<h1> src="[TEMPLATE]" alt="plantilla" srcset=""</h1>';
+		$etiqueta[] = '<h1> src="[TEMPLATE]" alt="plantilla" srcset=""</h1>';
 		$etiqueta = str_replace('[TEMPLATE]' , $ruta_completa.'.png', $etiqueta);
-		echo $etiqueta;	
-	$email_subject = 'Feliz Cumpleanos! ' . implode(", ", $nombres);
-	if (mail($to, $email_subject, $etiqueta, $email_headers) ){
-		echo '<hr /><center>Exitoo! Tu Correo ha sido enviado a '. $to .'</center>';
-	}
+			
+		$email_subject = 'Feliz Cumpleanos! ' . implode(", ", $nombres);
+		$cadena = implode('</br>', $etiqueta);
+		var_dump($cadena);
 	}
 	
 
 	//este while envia el correo a multiples destinatarios
 	while ($persona = $resultado_cons_correo->fetch_assoc()) {
-    	$to = $persona['correo'].',';
+		$to[] = $persona['correo'];
+    	$sent_to = implode(",", $to);
   	}
+	
+	echo $sent_to;
+	
 	if (DEMO)
 	die("<hr /><center>Esto es un demo de la plantilla HTML. El correo no fue enviado. </center>");	
 	//comprobamos el envio de correo
-	
+	if (mail($sent_to, $email_subject, $cadena, $email_headers) ){
+		echo '<hr /><center>Exitoo! Tu Correo ha sido enviado a '. print_r($sent_to) .'</center>';
+	}
 
 ?>
