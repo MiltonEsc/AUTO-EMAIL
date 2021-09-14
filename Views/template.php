@@ -112,7 +112,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table">
+                    <table class="table" id="data-usuarios">
                       <thead class=" text-warning text-center">
                         <th>
                           ID
@@ -164,7 +164,6 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div>
             </div><!--fin de la tabla-->
-            
       </div>
     </div>
       </div>

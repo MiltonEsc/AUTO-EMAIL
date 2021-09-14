@@ -1,11 +1,13 @@
 <?php
     // permite hacer cambios y testear sin necesidad de enviar correos
-	define("DEMO", false); // cuanto esta en TRUE ningun correo podra ser enviado.
-	// llamamos la conexion a la base de datos
+	 // cuanto esta en TRUE ningun correo podra ser enviado.
+	define("DEMO", true);
+	// incluimos la conexion a la base de datos
 	include ($_SERVER['DOCUMENT_ROOT']."/AUTO-EMAIL/conexion/db.php");
-	// comsultas simples una trae quien cumple años hoy y la otra me selecciona todos los campos de tabla
+	// comsultas simples la primera trae quienes cumplen años hoy y la otra me selecciona todos los campos de tabla
 	$cons_fecha = "SELECT * FROM personas WHERE DATE_FORMAT(fecha_nacimiento, '%m-%d') = DATE_FORMAT(now(),'%m-%d')";           
-	$cons_correo = "SELECT * FROM personas";		
+	$cons_correo = "SELECT * FROM personas";
+		
 	$resultado_cons_correo = $mysqli->query($cons_correo);
 	$resultado_cons_fecha = $mysqli->query($cons_fecha); 
 
@@ -35,13 +37,11 @@
     	$sent_to = implode(",", $to);
   	}
 	
-	echo $sent_to;
-	
 	if (DEMO)
 	die("<hr /><center>Esto es un demo de la plantilla HTML. El correo no fue enviado. </center>");	
 	//comprobamos el envio de correo
 	if (mail($sent_to, $email_subject, $cadena, $email_headers) ){
-		echo '<hr /><center>Exitoo! Tu Correo ha sido enviado a '. print_r($sent_to) .'</center>';
+		echo '<hr /><center>Exitoo! Tu Correo ha sido enviado a '. $sent_to .'</center>';
 	}
 
 ?>

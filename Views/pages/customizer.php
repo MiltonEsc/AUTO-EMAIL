@@ -81,6 +81,8 @@
   <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
   <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/plugins/bootstrap-notify.js"></script>
+  <!--DATATABLES-->
+  <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js"></script> -->
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
@@ -106,6 +108,10 @@
           }
 
         }
+
+        $(document).ready( function () {
+              $('#data-usuarios').DataTable();
+        } );
 
         $('.fixed-plugin a').click(function(event) {
           // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
