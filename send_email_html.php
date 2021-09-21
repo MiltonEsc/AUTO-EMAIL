@@ -20,13 +20,14 @@
 	while ($datos = $resultado_cons_fecha->fetch_assoc()){
 		$id = $datos['id'];
 		$nombres[] = $datos['nombres'];
-		$ruta = "Archivos/";
+		$ruta = "Archivos/contenedor";
 		$ruta_completa = $ruta . $id;
-		$etiqueta[] = '<h1> src="[TEMPLATE]" alt="plantilla" srcset=""</h1>';
-		$etiqueta = str_replace('[TEMPLATE]' , $ruta_completa.'.png', $etiqueta);
+		$etiqueta[] = '<img src="[TEMPLATE]" alt="plantilla" srcset=""/>';
+		$etiqueta = str_replace('[TEMPLATE]' ,$ruta_completa.'.png', $etiqueta);
 			
 		$email_subject = 'Feliz Cumpleanos! ' . implode(", ", $nombres);
 		$cadena = implode('</br>', $etiqueta);
+		echo $cadena;
 		var_dump($cadena);
 	}
 	
@@ -40,7 +41,7 @@
 	if (DEMO)
 	die("<hr /><center>Esto es un demo de la plantilla HTML. El correo no fue enviado. </center>");	
 	//comprobamos el envio de correo
-	if (mail($sent_to, $email_subject, $cadena, $email_headers) ){
+	if (mail('practicantetic@superbrix.com', $email_subject, $cadena, $email_headers) ){
 		echo '<hr /><center>Exitoo! Tu Correo ha sido enviado a '. $sent_to .'</center>';
 	}
 

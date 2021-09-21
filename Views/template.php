@@ -138,7 +138,7 @@ The above copyright notice and this permission notice shall be included in all c
                       </thead>
                       <tbody>
                           <?php
-                          $show_persona = "SELECT * FROM personas";
+                          $show_persona = "SELECT * FROM personas WHERE estado = 1";
                           $result_personas = mysqli_query($mysqli, $show_persona);
                           while ($row = mysqli_fetch_array($result_personas)) { ?>
                             <tr>
@@ -152,7 +152,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 <a class="btn btn-info  btn-fab btn-fab-mini btn-round" href="./Controllers/edit-empleado.php?id=<?php echo $row['id'] ?>">
                                 <i class="material-icons">edit</i>
                                 </a>
-                                <a class="btn btn-danger  btn-fab btn-fab-mini btn-round"href="Controllers/delete-empleado.php?id=<?php echo $row['id'] ?>">
+                                <a id="delete" class="btn btn-danger btn-fab btn-fab-mini btn-round"href="Controllers/delete-empleado.php?id=<?php echo $row['id'] ?>">
                                 <i class="material-icons">delete</i>
                                 </a>
                               </td>

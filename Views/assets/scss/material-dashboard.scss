@@ -52,3 +52,13 @@
  @import "material-dashboard/plugins/perfect-scrollbar";
 
  @import "material-dashboard/responsive";
+/* import the necessary Bootstrap files */
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+$theme-colors: (
+  primary: $black
+);
+
+/* finally, import Bootstrap */
+@import "bootstrap";

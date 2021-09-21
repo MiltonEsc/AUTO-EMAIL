@@ -19,6 +19,6 @@
   <link href="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/Views/assets/demo/demo.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css"> -->
-  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 <body class="">

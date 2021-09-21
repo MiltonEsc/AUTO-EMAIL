@@ -11,7 +11,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/index.php">
+            <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/AUTO-EMAIL/home.php">
               <i class="material-icons">dashboard</i>
               <p>INICIO</p>
             </a>

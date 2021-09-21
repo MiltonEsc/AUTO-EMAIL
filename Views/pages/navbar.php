@@ -31,7 +31,7 @@
                   <a class="dropdown-item" href="#">Perfil</a>
                   <a class="dropdown-item" href="#">Configuracion</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                  <a class="dropdown-item" href="Controllers/cerrar-session.php">Cerrar Sesion</a>
                 </div>
               </li>
             </ul>

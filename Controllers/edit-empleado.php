@@ -33,7 +33,7 @@
             $_SESSION['message'] = 'Person@ Actualizada Sastifactoriamente';
             $_SESSION['message_type'] = 'success';
 
-            header("Location:../index.php");
+            header("Location:../home.php");
         }
     }
 ?>

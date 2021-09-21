@@ -17,9 +17,17 @@
             success:function(respuesta) {	
               respuesta = parseInt(respuesta);
               if (respuesta > 0) {
-                alert("Imagen creada con exito!");
+                Swal.fire(
+                  'Listo!',
+                  'Imagen creada con exito!',
+                  'success'
+                )
               } else {
-                alert("No se pudo crear la imagen :(");
+                Swal.fire(
+                  'error!',
+                  'No se pudo crear la imagen :(',
+                  'error'
+                )
               }
             }
           });
@@ -31,11 +39,10 @@
     html2canvas(document.querySelector("." + div),{ letterRendering: 1, useCORS:true, allowTaint : true, onrendered : function (canvas) { } }) // Llamar a html2canvas y pasarle el elemento  
     .then(canvas => {
         var dataURL = canvas.toDataURL();
-        //console.log(dataURL);
+        console.log(dataURL);
         
       // Cuando se resuelva la promesa traerá el canvas
          base = "img=" + dataURL + "&nombre=" + nombre;
-         console.log(base);
          $.ajax({
           type:"POST",
           url:"../Controllers/crearImagenes.php",
@@ -43,9 +50,17 @@
           success:function(respuesta) {	
             respuesta = parseInt(respuesta);
             if (respuesta > 0) {
-              alert("Imagen creada con exito!");
+              Swal.fire(
+                'Listo!',
+                'Imagen creada con exito!',
+                'success'
+              )
             } else {
-              alert("No se pudo crear la imagen :(");
+              Swal.fire(
+                'error!',
+                'No se pudo crear la imagen :(',
+                'error'
+              )
             }
           }
         });
