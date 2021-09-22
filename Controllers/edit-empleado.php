@@ -6,6 +6,8 @@
     
 <?php include ($_SERVER['DOCUMENT_ROOT']."/AUTO-EMAIL/conexion/db.php");?>
 <?php
+    setlocale(LC_TIME, "spanish");
+    $fechaActual = strftime("%d de %B de %Y");
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $query = "SELECT * FROM personas WHERE id = $id";
@@ -32,9 +34,16 @@
             mysqli_query($mysqli, $query);
             $_SESSION['message'] = 'Person@ Actualizada Sastifactoriamente';
             $_SESSION['message_type'] = 'success';
-
-            header("Location:../home.php");
+            header("Refresh:0");
         }
+
+       $foto_ruta = '../Archivos'.'/contenedor'.$id.'.png';
+       echo "<script>alert($foto_ruta)</script>";
+       if (file_exists($foto_ruta)) {
+        echo "Esta variable está definida, así que se imprimirá";
+       }else {
+           echo "no definida";
+       }
     }
 ?>
 <div class="content">
@@ -79,14 +88,64 @@
                     </div>
                 </div>
                 <button name="update-empleado"class="btn btn-warning pull-right">Actualizar Persona</button>
+                <button id="btnCapturar" type="button" class="btn btn-danger">capturar foto</button>
                 <!-- <div class="clearfix"></div> -->
                 </form>
             </div>
         </div>
+        <?php if (file_exists($foto_ruta)) {
+           
+         foreach ($update_persona as $ListarDatos) : ?>
+            <div id="contenedor<?php echo $ListarDatos['id']?>" class="contenedor" style="width: 800px; height:600px; margin:0 auto;">
+                <img id="fondo" src="<?php $_SERVER['DOCUMENT_ROOT']?>/AUTO-EMAIL/Views/img/Plantillacumpleanios.png" style="width: 800px; height:600px; z-index: -3; position: absolute;" alt="" srcset="">
+                    <div style="padding-top: 60px; margin-left: 60px; width: 340px; height: 474px;">
+                            <h4 style="text-align: center; margin-bottom: 2px; cursive;  font-size: 20px; color: #b45f06"></h4>
+                            
+                            <h4 style="text-align: center; margin-top: 58px; font-size: 15px; font-family: 'Exo', sans-serif; color: black;"><strong>Hoy <?php echo $fechaActual; ?></strong></h4>
+                        <div class="foto">
+                            <center><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/AUTO-EMAIL/Views/assets/img/faces/perfil1.jpg" width="140" height="140"style="text-align: center; margin:0 auto;" alt="" srcset=""></center>
+                        </div>
+                        <center><h4 style="text-align: center; margin: 4px 0px 0px 0px; font-family: 'Courgette', cursive; font-weight: bold; font-size: 19px; color: #b45f06"><?php echo $ListarDatos['nombres']; ?></h4></center>
+                            
+                        <center><p style="text-align: center; font-family: 'Exo', sans-serif; margin: 0; font-size: 15px; color:black;"><strong><?php echo $ListarDatos['cargo']; ?></strong></p></center>
+                        <center><p style="text-align: center; margin: 0; font-family: 'Exo', sans-serif;color:black; font-weight: 500;"><strong>Ext. <?php echo $ListarDatos['exten']; ?></strong></p></center>
+                    </div>          
+                </div>
+            </div>
+        <?php endforeach; ?> 
+    <?php } else {
+        echo "no existe esto";
+    }?>
+<script src="<?php $_SERVER['DOCUMENT_ROOT']?>../libraries/jquery-3.4.1.min.js"></script>     
+<script src="<?php $_SERVER['DOCUMENT_ROOT']?>../libraries/html2canvas.min.js"></script>
+<script src="../script.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#btnCapturar').click(function(){
+      var cont = '<?php echo $ListarDatos['id']?>';
+
+      for (let i = 1; i <= cont; i++) {
+        
+        tomarImagenPorSeccion('contenedor'+i,'contenedor'+i);  
+      }
+    });
+
+    $('#OcultarImg').click(function(){
+      $("#imagenes").css("display", "none");
+      $("#padre").css("display", "none");
+      
+    });
+    $('#MostrarImg').click(function(){
+      $("#imagenes").css("display", "block");
+      $("#padre").css("display", "block");
+      
+    });
+  })
+</script>
     </div>
-</div>
 <?php include ($_SERVER['DOCUMENT_ROOT'].'/AUTO-EMAIL/Views/pages/navbar.php');?>
 <?php include ($_SERVER['DOCUMENT_ROOT'].'/AUTO-EMAIL/Views/pages/footer.php');?>
 
 </div>
 <?php include ($_SERVER['DOCUMENT_ROOT'].'/AUTO-EMAIL/Views/pages/customizer.php');?>
+<img src="" alt="" srcset="">

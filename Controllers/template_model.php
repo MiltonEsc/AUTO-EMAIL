@@ -47,15 +47,23 @@ $cont = 1;
               <button id="btnCapturarUltimoRegistro" type="button" class="btn btn-success">Capturar solo la ultima foto</button>
         </div>
     </div>
+    <div class="col-md-2">
+        <input type="date" name="From" id="From" class="form-control" placeholder="From Date"/>
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="to" id="to" class="form-control" placeholder="To Date"/>
+    </div>
+    <div class="col-md-8">
+        <input type="button" name="range" id="range" value="Range" class="btn btn-success"/>
+    </div>
+    <div class="clearfix"></div>
       <div id="imagenes">
       
           <?php foreach ($resultado_todos as $ListarDatos) : ?>
             
             <?php $ListarDatos['id'] ?>
   
-            
-            
-            <div id="contenedor<?php echo $ListarDatos['id']?>" class="contenedor" style="width: 800px; height:600px; margin:0 auto;">
+        <div id="contenedor<?php echo $ListarDatos['id']?>" class="contenedor" style="width: 800px; height:600px; margin:0 auto;">
               <img id="fondo" src="<?php $_SERVER['DOCUMENT_ROOT']?>/AUTO-EMAIL/Views/img/Plantillacumpleanios.png" style="width: 800px; height:600px; z-index: -3; position: absolute;" alt="" srcset="">
                   <div style="padding-top: 60px; margin-left: 60px; width: 340px; height: 474px;">
                           <h4 style="text-align: center; margin-bottom: 2px; cursive;  font-size: 20px; color: #b45f06"></h4>
@@ -78,7 +86,6 @@ $cont = 1;
       </div>
       
           </div>
-<!-- <button id="btnCapturar">Tomar captura</button> -->
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>../libraries/jquery-3.4.1.min.js"></script>     
 <script src="<?php $_SERVER['DOCUMENT_ROOT']?>../libraries/html2canvas.min.js"></script>
 <script src="../script.js"></script>
@@ -92,14 +99,6 @@ $cont = 1;
         
         tomarImagenPorSeccion('contenedor'+i,'contenedor'+i);  
       }
-    });
-
-    $(function() {
-      $('input[name="daterange"]').daterangepicker({
-        opens: 'left'
-      }, function(start, end, label) {
-        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-      });
     });
 
     $('#OcultarImg').click(function(){
